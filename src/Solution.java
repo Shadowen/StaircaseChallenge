@@ -174,7 +174,8 @@ public class Solution {
 				Node next = nextEntry.getKey();
 				int cost = nextEntry.getValue();
 				int distanceFromStart = currentNode.distanceFromStart + cost;
-				int heuristicDistance = distanceFromStart;
+				int heuristicDistance = distanceFromStart + numSteps
+						- next.getStepNum();
 				if (DEBUG) {
 					System.out.print(" " + next + " (" + distanceFromStart
 							+ "),");
